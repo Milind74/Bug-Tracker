@@ -5,7 +5,7 @@ services:
     repo: https://github.com/Milind74/Bug-Tracker.git
     rootDir: ./bug-tracker-server
     buildCommand: ls -la && pwd && npm --version && node --version && npm install && ls -la node_modules && npm run build
-    startCommand: npm start
+    startCommand: node dist/index.js
     plan: free
     envVars:
       - key: NODE_ENV
