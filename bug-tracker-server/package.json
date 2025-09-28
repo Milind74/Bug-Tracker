@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "build": "tsc --skipLibCheck",
+    "start": "node dist/index.js",
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "keywords": ["bug-tracker", "api", "express"],
   "author": "",
