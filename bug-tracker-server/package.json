@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc --skipLibCheck --noEmitOnError false || (echo TypeScript build failed, using fallback && copy fallback.js dist\\index.js)",
-    "build:fallback": "copy fallback.js dist\\index.js",
+    "build": "npm run build:ts || npm run build:fallback",
+    "build:ts": "tsc --skipLibCheck",
+    "build:fallback": "node -e \"const fs=require('fs'); if(!fs.existsSync('dist'))fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('fallback.js','dist/index.js'); console.log('Using fallback server');\"",
     "start": "node dist/index.js",
     "postinstall": "echo Dependencies installed successfully"
   },
