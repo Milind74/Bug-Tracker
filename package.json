@@ -1,0 +1,24 @@
+{
+  "name": "mini-jira-bug-tracker",
+  "version": "1.0.0",
+  "description": "A full-stack bug tracking application built with React, Node.js, and MongoDB",
+  "keywords": ["bug-tracker", "react", "nodejs", "mongodb", "typescript", "material-ui"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mini-jira-bug-tracker.git"
+  },
+  "scripts": {
+    "install:all": "cd bug-tracker-server && npm install && cd ../bug-tracker-client && npm install",
+    "build:all": "cd bug-tracker-server && npm run build && cd ../bug-tracker-client && npm run build",
+    "dev:server": "cd bug-tracker-server && npm run dev",
+    "dev:client": "cd bug-tracker-client && npm run dev",
+    "start:server": "cd bug-tracker-server && npm start",
+    "start:client": "cd bug-tracker-client && npm run preview"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

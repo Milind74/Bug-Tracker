@@ -1,0 +1,27 @@
+version: "1"
+build:
+  - name: server
+    env: node
+    buildCommand: cd bug-tracker-server && npm install && npm run build
+    startCommand: cd bug-tracker-server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: $PORT
+services:
+  - type: web
+    name: mini-jira-backend
+    env: node
+    repo: https://github.com/yourusername/mini-jira-bug-tracker.git
+    buildCommand: cd bug-tracker-server && npm install && npm run build
+    startCommand: cd bug-tracker-server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: $PORT
