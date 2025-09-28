@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mini-jira-bug-tracker.git"
+    "url": "https://github.com/Milind74/Bug-Tracker.git"
   },
   "scripts": {
     "install:all": "cd bug-tracker-server && npm install && cd ../bug-tracker-client && npm install",

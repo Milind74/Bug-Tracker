@@ -71,8 +71,8 @@ A full-stack bug tracking application built with React, Node.js, and MongoDB. Fe
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/mini-jira-bug-tracker.git
-   cd mini-jira-bug-tracker
+   git clone https://github.com/Milind74/Bug-Tracker.git
+   cd Bug-Tracker
    ```
 
 2. **Install dependencies**
@@ -216,9 +216,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - MongoDB team for the flexible database
 - React team for the amazing frontend framework
 
+- **Author**: Milind74
+- **GitHub**: https://github.com/Milind74/Bug-Tracker
+- **License**: MIT
+
 ## 📞 Support
 
-If you have any questions or issues, please open an issue on GitHub or contact me at your-email@example.com.
+If you have any questions or issues, please open an issue on GitHub or contact me.
 
 ---
 

@@ -13,7 +13,7 @@ services:
   - type: web
     name: mini-jira-backend
     env: node
-    repo: https://github.com/yourusername/mini-jira-bug-tracker.git
+    repo: https://github.com/Milind74/Bug-Tracker.git
     buildCommand: cd bug-tracker-server && npm install && npm run build
     startCommand: cd bug-tracker-server && npm start
     envVars:
