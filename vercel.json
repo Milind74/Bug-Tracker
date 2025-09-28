@@ -10,17 +10,11 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "https://your-backend-url.render.com/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "bug-tracker-client/dist/$1"
-    }
-  ],
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://your-backend-url.render.com/api/$1"
+    },
     {
       "source": "/((?!api/.*).*)",
       "destination": "/index.html"
