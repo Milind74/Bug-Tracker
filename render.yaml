@@ -1,21 +1,12 @@
-version: "1"
-build:
-  - name: server
-    env: node
-    buildCommand: cd bug-tracker-server && npm install && npm run build
-    startCommand: cd bug-tracker-server && npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: $PORT
 services:
   - type: web
     name: mini-jira-backend
     env: node
     repo: https://github.com/Milind74/Bug-Tracker.git
-    buildCommand: cd bug-tracker-server && npm install && npm run build
-    startCommand: cd bug-tracker-server && npm start
+    rootDir: ./bug-tracker-server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    plan: free
     envVars:
       - key: NODE_ENV
         value: production
@@ -23,5 +14,3 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: PORT
-        value: $PORT
