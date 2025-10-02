@@ -14,7 +14,9 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "declaration": false,
-    "removeComments": true
+    "removeComments": true,
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
