@@ -1,15 +1,10 @@
 {
   "version": 2,
   "name": "mini-jira-frontend",
-  "builds": [
-    {
-      "src": "bug-tracker-client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
+  "buildCommand": "cd bug-tracker-client && npm run build",
+  "outputDirectory": "bug-tracker-client/dist",
+  "installCommand": "cd bug-tracker-client && npm install",
+  "framework": "vite",
   "rewrites": [
     {
       "source": "/api/(.*)",
