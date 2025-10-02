@@ -15,4 +15,4 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ORIGIN
-        value: https://your-frontend-url.vercel.app
+        value: https://bug-tracker-lovat.vercel.app
